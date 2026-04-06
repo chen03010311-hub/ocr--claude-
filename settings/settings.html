@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>设定 - OCR Vocab</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="settings-container">
+    <header class="settings-header">
+      <a id="back-btn" class="back-btn">← 返回</a>
+      <h1>设　定</h1>
+    </header>
+
+    <main>
+      <section class="settings-section">
+        <h2 class="section-title">OpenAI API Key</h2>
+        <p class="section-desc">
+          OCR 识别、翻译、词性、例句均通过硅基流动 Qwen2.5-VL 实现。<br>
+          请在
+          <a href="https://cloud.siliconflow.cn/account/ak" target="_blank">cloud.siliconflow.cn</a>
+          获取 API Key。
+        </p>
+
+        <div class="input-group">
+          <label for="api-key-input">API Key</label>
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="api-key-input"
+              placeholder="sk-..."
+              autocomplete="off"
+              spellcheck="false"
+            >
+            <button id="toggle-visibility" class="toggle-btn" title="显示/隐藏">👁</button>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button id="save-btn" class="btn btn-primary">保存</button>
+          <button id="clear-btn" class="btn btn-danger">清除</button>
+        </div>
+
+        <div id="status-msg" class="status-msg"></div>
+      </section>
+
+      <section class="settings-section">
+        <h2 class="section-title">使用方式</h2>
+        <ul class="usage-list">
+          <li>按 <kbd>Alt+Shift+S</kbd> 启动截图选词模式</li>
+          <li>或在页面右键菜单选择「OCR 截图选词」</li>
+          <li>拖拽鼠标框选含英文单词的区域</li>
+          <li>自动 OCR 识别并显示翻译结果</li>
+          <li>单词自动保存到单词列表</li>
+          <li>按 <kbd>Esc</kbd> 取消选词模式</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <script src="settings.js"></script>
+</body>
+</html>

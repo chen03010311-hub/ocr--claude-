@@ -1,0 +1,260 @@
+/* wordlist.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f7f8fa;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.wordlist-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+/* Header */
+.wordlist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.word-count {
+  font-size: 13px;
+  color: #999;
+  background: #f0f0f0;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 8px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 13px;
+  width: 200px;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+.search-input:focus {
+  border-color: #4f8ef7;
+}
+
+.btn-clear-all {
+  padding: 7px 14px;
+  border: 1.5px solid #ffcdd2;
+  background: #fff;
+  color: #e53935;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.btn-clear-all:hover {
+  background: #ffebee;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.empty-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.empty-desc {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.7;
+}
+
+.no-results {
+  text-align: center;
+  padding: 48px;
+  color: #999;
+  font-size: 15px;
+}
+
+/* Word Grid */
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Word Card */
+.word-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  position: relative;
+  transition: box-shadow 0.15s, transform 0.15s;
+  border: 1.5px solid transparent;
+}
+.word-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+.word-card.pinned {
+  border-color: #ffd54f;
+  background: #fffef7;
+}
+
+/* Card Action Buttons */
+.card-actions {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.word-card:hover .card-actions {
+  opacity: 1;
+}
+
+.btn-pin,
+.btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 6px;
+  line-height: 1;
+  transition: background 0.15s;
+}
+.btn-pin:hover   { background: #fff9e6; }
+.btn-delete:hover { background: #ffebee; }
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+  padding-right: 56px;
+  flex-wrap: wrap;
+}
+
+.card-word {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+}
+
+.card-phonetic {
+  font-size: 12px;
+  color: #aaa;
+  font-style: italic;
+}
+
+.card-pos {
+  font-size: 11px;
+  color: #4f8ef7;
+  background: #eef3ff;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-weight: 500;
+}
+
+/* Translation */
+.card-translation {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+/* Example */
+.card-example {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.card-example-cn {
+  font-size: 12px;
+  color: #aaa;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* Footer */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card-date {
+  font-size: 11px;
+  color: #ccc;
+}
+
+.card-source {
+  font-size: 11px;
+  color: #4f8ef7;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.card-source:hover {
+  opacity: 1;
+  text-decoration: underline;
+}

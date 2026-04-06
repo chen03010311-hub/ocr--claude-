@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR Vocab</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="popup-logo">📖</div>
+      <div class="popup-title">OCR Vocab</div>
+      <div class="popup-subtitle">截图选词，智能翻译</div>
+    </div>
+
+    <div class="popup-tip">
+      按 <kbd>Alt+Shift+S</kbd> 或右键菜单启动截图选词
+    </div>
+
+    <div class="popup-buttons">
+      <button id="btn-wordlist" class="popup-btn popup-btn-primary">
+        <span class="btn-icon">📚</span>
+        <span>查看单词列表</span>
+      </button>
+      <button id="btn-settings" class="popup-btn popup-btn-secondary">
+        <span class="btn-icon">⚙️</span>
+        <span>设　　定</span>
+      </button>
+    </div>
+
+    <div class="popup-footer" id="api-status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

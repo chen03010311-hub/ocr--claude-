@@ -1,0 +1,119 @@
+/* popup.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 240px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.popup-container {
+  padding: 20px 16px 16px;
+}
+
+.popup-header {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.popup-logo {
+  font-size: 36px;
+  margin-bottom: 4px;
+}
+
+.popup-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.popup-subtitle {
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.popup-tip {
+  background: #f5f7ff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.popup-tip kbd {
+  background: #e8ecf8;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-family: monospace;
+  font-size: 11px;
+  color: #4f8ef7;
+  border: 1px solid #d0d8f0;
+}
+
+.popup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.popup-btn-primary {
+  background: #4f8ef7;
+  color: #fff;
+  font-weight: 600;
+}
+.popup-btn-primary:hover {
+  background: #3a7de0;
+}
+
+.popup-btn-secondary {
+  background: #f5f5f5;
+  color: #333;
+}
+.popup-btn-secondary:hover {
+  background: #ebebeb;
+}
+
+.btn-icon {
+  font-size: 16px;
+}
+
+.popup-footer {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 11px;
+  padding: 4px 0;
+  border-radius: 6px;
+}
+
+.status-ok {
+  color: #4caf50;
+}
+
+.status-warn {
+  color: #ff9800;
+}

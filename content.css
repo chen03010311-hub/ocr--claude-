@@ -1,0 +1,194 @@
+/* content.css - 注入页面样式 */
+
+#ocr-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483640;
+  cursor: crosshair;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+#ocr-selection-box {
+  position: fixed;
+  z-index: 2147483641;
+  display: none;
+  border: 2px solid #4f8ef7;
+  background: rgba(79, 142, 247, 0.08);
+  pointer-events: none;
+  box-shadow: 0 0 0 1px rgba(79, 142, 247, 0.4);
+}
+
+/* 结果卡片 */
+#ocr-result-card {
+  position: fixed;
+  z-index: 2147483645;
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  animation: ocr-fadeIn 0.15s ease-out;
+  box-sizing: border-box;
+}
+
+@keyframes ocr-fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ocr-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #999;
+  padding: 2px 4px;
+  line-height: 1;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+.ocr-close-btn:hover {
+  color: #333;
+  background: #f0f0f0;
+}
+
+/* 卡片头部 */
+.ocr-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+  padding-right: 24px;
+}
+
+.ocr-word {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+}
+
+.ocr-phonetic {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+}
+
+.ocr-pos {
+  font-size: 11px;
+  color: #4f8ef7;
+  background: #eef3ff;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+/* 翻译 */
+.ocr-translation {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ocr-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+/* 例句 */
+.ocr-example {
+  font-size: 13px;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.ocr-example-cn {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.5;
+}
+
+/* 保存提示 */
+.ocr-saved-hint {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #4caf50;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.ocr-saved-hint::before {
+  content: '✓';
+  font-weight: bold;
+}
+
+/* Loading 状态 */
+.ocr-card.ocr-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  width: auto;
+  min-width: 160px;
+}
+
+.ocr-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid #e0e0e0;
+  border-top-color: #4f8ef7;
+  border-radius: 50%;
+  animation: ocr-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes ocr-spin {
+  to { transform: rotate(360deg); }
+}
+
+.ocr-loading-text {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 错误状态 */
+.ocr-card.ocr-error-card {
+  text-align: center;
+  padding: 20px 16px;
+}
+
+.ocr-error-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.ocr-error-msg {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.ocr-settings-btn {
+  background: #4f8ef7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.ocr-settings-btn:hover {
+  background: #3a7de0;
+}

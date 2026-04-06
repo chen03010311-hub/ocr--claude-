@@ -1,0 +1,10 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+
+# 敏感信息（API Key 存在浏览器 storage 中，不会出现在文件里）
+*.env

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>单词列表 - OCR Vocab</title>
+  <link rel="stylesheet" href="wordlist.css">
+</head>
+<body>
+  <div class="wordlist-container">
+    <header class="wordlist-header">
+      <div class="header-left">
+        <h1>📚 单词列表</h1>
+        <span id="word-count" class="word-count"></span>
+      </div>
+      <div class="header-right">
+        <input type="text" id="search-input" placeholder="搜索单词..." class="search-input">
+        <button id="clear-all-btn" class="btn-clear-all" title="清空所有单词">清空全部</button>
+      </div>
+    </header>
+
+    <div id="empty-state" class="empty-state" style="display:none;">
+      <div class="empty-icon">📖</div>
+      <div class="empty-title">还没有单词</div>
+      <div class="empty-desc">使用 Alt+Shift+S 或右键菜单截图选词，<br>单词会自动保存在这里。</div>
+    </div>
+
+    <div id="word-grid" class="word-grid"></div>
+  </div>
+  <script src="wordlist.js"></script>
+</body>
+</html>
